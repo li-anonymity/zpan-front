@@ -16,7 +16,6 @@
 <script>
 import GridExplorer from "./explorer/GridExplorer";
 import ListExplorer from "./explorer/ListExplorer";
-import FileViewer from "../FileViewer";
 export default {
   components: {
     GridExplorer,
@@ -138,7 +137,7 @@ export default {
       }
 
       this.linkLoader(obj).then((link) => {
-        new FileViewer().view(type, obj, link);
+        this.$emit("file-open", type, obj, link);
       });
     },
   },

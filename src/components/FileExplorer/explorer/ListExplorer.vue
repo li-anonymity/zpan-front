@@ -91,6 +91,14 @@ export default {
 .el-table__row:hover .operation {
   display: block;
 }
+
+.el-table >>> .el-checkbox__inner {
+  width: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .operation .el-link {
   font-size: 20px !important;
   margin: 0 2px;
